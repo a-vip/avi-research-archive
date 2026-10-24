@@ -6,6 +6,7 @@
 
 | Date | Research Dossier / Publication | Canonical Link |
 | :--- | :--- | :--- |
+| `2026-10-23` | [PHP2Shell: How an AI-Assisted Discovery Pulled Governments Offline, and What It Means for Law and Global Security](php2shell-ai-discovered-php-vulnerability.md) | [Original Article ↗](https://aviperera.com/php2shell-ai-discovered-php-vulnerability/) |
 | `2026-10-20` | [V-BAT (MQ-35)](v-bat-mq-35.md) | [Original Article ↗](https://aviperera.com/v-bat-mq-35/) |
 | `2026-10-19` | [Norinco Fuxi and NUDT Combat Humanoids](norinco-fuxi-and-nudt-combat-humanoids.md) | [Original Article ↗](https://aviperera.com/norinco-fuxi-and-nudt-combat-humanoids/) |
 | `2026-10-18` | [FEDOR Skybot F-850](fedor-skybot-f-850.md) | [Original Article ↗](https://aviperera.com/fedor-skybot-f-850/) |
@@ -105,4 +106,3 @@
 | `2024-10-17` | [Finite and Infinite Games: A Multidisciplinary Analysis](finite-and-infinite-games-a-multidisciplinary-analysis.md) | [Original Article ↗](https://aviperera.com/finite-and-infinite-games-a-multidisciplinary-analysis/) |
 | `2024-10-16` | [Human Compatible (Stuart Russell) – Book Summary, Notes & Highlights](human-compatible-stuart-russell-book-summary-notes-highlights.md) | [Original Article ↗](https://aviperera.com/human-compatible-stuart-russell-book-summary-notes-highlights/) |
 | `2024-10-16` | [The Alignment Problem (Brian Christian) – Book Summary, Notes & Highlights](the-alignment-problem-machine-learning-and-human-values-comprehensive-book-summary.md) | [Original Article ↗](https://aviperera.com/the-alignment-problem-machine-learning-and-human-values-comprehensive-book-summary/) |
-| `2024-10-15` | [International Relations Jobs: Your Guide to a Global Career](international-relations-jobs-your-guide-to-a-global-career.md) | [Original Article ↗](https://aviperera.com/international-relations-jobs-your-guide-to-a-global-career/) |
