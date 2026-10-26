@@ -17,259 +17,221 @@ source: "https://aviperera.com"
 
 ---
 
-When Microsoft’s AI chatbot [Tay](https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist) descended into generating hate speech within 24 hours of its launch in 2016, it was viewed as a fascinating experiment gone wrong. Today, such a failure would be viewed as a corporate liability. As we venture further into the age of Generative AI, examining these failures is no longer just academically interesting—it is critical for legal survival.
+In March 2016, Microsoft’s chatbot Tay lasted less than a day on Twitter before it was pulled offline for posting abusive content. At the time it read as an embarrassing experiment. Eight years later, a Canadian tribunal ordered Air Canada to stand behind what its chatbot had told a grieving customer, and rejected the airline’s argument that the bot was responsible for itself. Between those two events, the cost of an AI failure moved from reputation to liability.
 
-Recent statistics from the [2025 AI Index Report](https://aiindex.stanford.edu/report/) reveal a disturbing trend: reported AI incidents have surged by over 50% year-over-year. We have moved beyond simple classification errors to an era of deepfake fraud, hallucinated policies, and systemic bias. These case studies provide invaluable lessons for researchers, developers, and policymakers who must now navigate a landscape of strict enforcement.
+That shift is the thread running through this article. I revisit five well-documented failures (Tay, Amazon’s recruiting tool, Air Canada’s chatbot, Rite Aid’s facial recognition programme and the Arup deepfake fraud), set each against the law as it stands in October 2026, and draw out what product teams, lawyers and policymakers should do differently. I also add a shorter sixth case, Amazon Rekognition, because it shows how a vendor default becomes a public-interest problem.
 
-.kb-table-of-content-nav.kb-table-of-content-id2169_a2fe02-51 .kb-table-of-content-wrap{padding-top:var(--global-kb-spacing-sm, 1.5rem);padding-right:var(--global-kb-spacing-sm, 1.5rem);padding-bottom:var(--global-kb-spacing-sm, 1.5rem);padding-left:var(--global-kb-spacing-sm, 1.5rem);}.kb-table-of-content-nav.kb-table-of-content-id2169_a2fe02-51 .kb-table-of-contents-title-wrap{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.kb-table-of-content-nav.kb-table-of-content-id2169_a2fe02-51 .kb-table-of-contents-title{font-weight:regular;font-style:normal;}.kb-table-of-content-nav.kb-table-of-content-id2169_a2fe02-51 .kb-table-of-content-wrap .kb-table-of-content-list{font-weight:regular;font-style:normal;margin-top:var(--global-kb-spacing-sm, 1.5rem);margin-right:0px;margin-bottom:0px;margin-left:0px;}
+The numbers support the urgency. The [Stanford AI Index 2026](https://hai.stanford.edu/ai-index) reports 362 documented AI incidents in 2025, up from 233 in 2024, drawing on the [AI Incident Database](https://incidentdatabase.ai/). That database is curated by hand and skews towards high-profile incidents, so I treat the figure as a direction of travel rather than an exact count.
+
+## Key takeaways
+
+- Companies are being held to what their AI systems say and do. Moffatt v. Air Canada and the FTC’s Rite Aid order are the clearest examples, though neither is binding on every court.
+
+- The EU’s high-risk AI obligations no longer apply in August 2026. The AI Omnibus moved them to 2 December 2027 (stand-alone systems) and 2 August 2028 (AI embedded in regulated products).
+
+- The new EU Product Liability Directive treats software as a product, but it only applies to products placed on the market after 9 December 2026.
+
+- US Executive Order 14110 was revoked in January 2025. Accountability in the United States now runs through the FTC, anti-discrimination law and private litigation.
+
+- A video call is no longer proof of identity. High-value payments need out-of-band verification and dual authorisation.
 
 ## Legal Framework for AI Ethics (Updated for 2026)
 
-As we enter 2026, the era of “voluntary codes” is over. We have transitioned from a phase of proposal to a phase of **enforcement**, with binding treaties and strict liability regimes now in effect across major jurisdictions.
+The era of voluntary codes is over, but the picture is less tidy than a simple move from proposal to enforcement. Some instruments are binding and in force, some are binding and waiting for ratifications, and some deadlines have moved. The table below is a status snapshot as of 26 October 2026. The sections that follow explain what each item means in practice.
+
+InstrumentStatus as of October 2026Why it mattersCouncil of Europe Framework Convention on AIOpened for signature September 2024. EU ratified 15 May 2026. Not yet in force.First binding international AI treaty. Requires remedies for rights violations. Excludes national defence.UN Global Digital Compact and A/RES/79/325Compact adopted September 2024. Scientific Panel and Global Dialogue created August 2025. First Dialogue held July 2026.Universal political and scientific forum on AI governance. Not binding.EU AI Act (Regulation 2024/1689), as amended by Regulation 2026/1744Prohibitions apply since February 2025. High-risk duties delayed to December 2027 and August 2028.Sets the global compliance reference point for employment, credit, biometrics and more.EU Product Liability Directive (2024/2853)Transposition deadline and start date 9 December 2026, for products placed on the market after that date.Software and AI become products under strict liability.UK Data (Use and Access) Act 2025 and Online Safety Act 2023Deepfake creation offence in force since 6 February 2026. Ofcom fines of up to 10% of qualifying worldwide revenue.Criminal and regulatory exposure for intimate deepfakes and platform failures.US federal positionExecutive Order 14110 revoked 20 January 2025. No comprehensive federal AI statute that I am aware of.Enforcement runs through the FTC, discrimination law and private suits.
 
 #### International Instruments
 
 *
 
-**Council of Europe Framework Convention on AI (2024)** Opened for signature in September 2024, this is the world’s first [legally binding international treaty on AI](https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence). Unlike EU law, which focuses on market safety, this Treaty focuses strictly on **Human Rights, Democracy, and the Rule of Law**.
+The [Council of Europe Framework Convention on Artificial Intelligence](https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence) was opened for signature on 5 September 2024. It concentrates on human rights, democracy and the rule of law rather than market safety, and it obliges parties to provide effective remedies for victims of rights violations linked to AI. The European Union [ratified it on 15 May 2026](https://www.coe.int/web/artificial-intelligence/-/european-union-ratifies-the-council-of-europe-framework-convention-on-artificial-intelligence), but as of early October 2026 it had not entered into force: that needs five ratifications, including three by Council of Europe member states, followed by a three-month waiting period. Like the EU AI Act, it excludes national defence. That carve-out is central to my own work on autonomous weapons, and I discuss it further on my [AI safety page](https://www.claudeusercontent.com/aisafety/).
 
-- **Status:** Signed by the EU, UK, US, and others; currently in the ratification phase.
+At the United Nations, the Global Digital Compact was [adopted in September 2024](https://www.un.org/global-digital-compact/en/ai) as part of the Pact for the Future. Resolution [A/RES/79/325](https://www.un.org/pga/wp-content/uploads/sites/110/2025/12/A_RES_79_325-EN.pdf), adopted on 26 August 2025, then created the Independent International Scientific Panel on AI and the Global Dialogue on AI Governance. According to the [UN’s own Dialogue page](https://www.un.org/global-dialogue-ai-governance/en/faq), the Panel’s preliminary report was launched on 1 July 2026 and presented at the Dialogue’s first session. These bodies shape norms and evidence. They do not create enforceable duties.
 
-- **Key Impact:** It forces signatory nations to establish judicial remedies for victims of AI-related human rights violations.
+### European Union
 
-**UN Global Digital Compact (2025)** Adopted at the [UN Summit of the Future](https://www.un.org/techenvoy/global-digital-compact) in late 2025, the Compact establishes the first truly global consensus on AI governance. It mandates the creation of an **International Scientific Panel on AI** (modelled on the IPCC for climate change) to provide impartial, scientific assessments of AI risks to guide global policy.
+The [AI Act (Regulation (EU) 2024/1689)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) has banned certain practices, including social scoring and emotion recognition in workplaces and schools, since February 2025. The timetable for high-risk systems has since changed. [Regulation (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj), known as the AI Omnibus, was published on 24 July 2026 and entered into force on 27 July 2026. It moves the application date for stand-alone high-risk systems under Annex III, which cover AI used in employment, education, credit and law enforcement, [from 2 August 2026 to 2 December 2027](https://www.mondaq.com/uk/new-technology/1825722/eu-digital-omnibus-on-ai-enters-into-force), and moves AI embedded in regulated products to 2 August 2028. It also adds two new prohibited practices: systems designed to generate non-consensual intimate imagery and child sexual abuse material. Obligations for general-purpose AI models were not postponed, and breaches of high-risk requirements will still carry fines of up to 15 million euros or 3 percent of worldwide turnover once the dates arrive. Any source that still gives August 2026 as the high-risk deadline is out of date, including earlier versions of this article.
 
-#### European Union
+On liability, [Directive (EU) 2024/2853](https://eur-lex.europa.eu/eli/dir/2024/2853/oj) replaces the 1985 Product Liability Directive and expressly treats software, including AI systems, as a product. Member states must transpose it by 9 December 2026, and it applies to products placed on the market after that date, so claims about older products stay under the old regime. Liability remains strict, which means the claimant does not have to prove fault. The claimant must still show a defect, damage and a causal link, although the Directive introduces presumptions of defectiveness, for example where a defendant fails to disclose relevant evidence. The separate AI Liability Directive proposal was largely sidelined in favour of this route.
 
-**The AI Act (Regulation (EU) 2024/1689)** Fully legally binding, with the “unacceptable risk” bans (e.g., social scoring, emotion recognition in workplaces) having entered into force in February 2025.
+### United Kingdom
 
-- **Official Text:** [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+The [Data (Use and Access) Act 2025](https://www.legislation.gov.uk/ukpga/2025/18/contents) received Royal Assent in June 2025. Its section 138, in force since 6 February 2026, makes it a criminal offence to create or request the creation of an intimate deepfake image without consent. Under the [Online Safety Act 2023](https://www.legislation.gov.uk/ukpga/2023/50/contents), Ofcom can fine services up to 18 million pounds or 10 percent of qualifying worldwide revenue, whichever is greater, and in January 2026 it opened a formal investigation into X over Grok-generated intimate imagery. The investigation shows regulators now treat an AI tool that generates content differently from a platform that merely hosts it.
 
-- **2026 Milestone:** From August 2026, the bulk of obligations for **“High-Risk” systems** (Annex III) apply. This includes mandatory conformity assessments, fundamental rights impact assessments (FRIA), and registration in the EU database.
+### United States
 
-**The “New” Liability Regime: Product Liability Directive (PLD)** Crucial Update:* The specific “AI Liability Directive” has largely been sidelined in favour of the revised **Product Liability Directive**, adopted in late 2024 (Directive (EU) 2024/2853).
-
-- **Official Text:** [Directive (EU) 2024/2853](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853)
-
-- **Software is a Product:** The PLD explicitly classifies software and AI systems as “products.”
-
-- **Strict Liability:** Developers can now be held liable for damage caused by defective AI *without* the victim needing to prove negligence (fault). If the AI causes harm (including data loss or psychological harm), the producer is strictly liable.
-
-#### National Legislation (United Kingdom)
-
-**Data (Use and Access) Act 2025** Enacted in June 2025, this Act reforms the UK’s data landscape to support “Smart Data” schemes.
-
-- **Source:** [Data (Use and Access) Bill](https://bills.parliament.uk/bills/3763)
-
-- **AI Impact:** It creates a statutory footing for **Digital Verification Services**, essential for combating deepfakes. It also simplifies data reuse for scientific research, aiding AI model training in healthcare and science.
-
-**Online Safety Act (Full Implementation)** Now fully operational, Ofcom has begun enforcing “Duties of Care” against platforms hosting illegal AI-generated content (CSAM, fraud).
-
-- **Source:** [Online Safety Act 2023](https://www.legislation.gov.uk/ukpga/2023/50/contents)
-
-- **Deepfake Liability:** Platforms face fines of up to 10% of global turnover if they fail to prevent the proliferation of non-consensual deepfake pornography or AI-enabled fraud.
-
-#### United States
-
-**Executive Order 14110 & Agency Rulemaking** While federal legislation remains gridlocked, enforcement has moved to the agency level. The **FTC** has successfully applied “Algorithmic Disgorgement” (forcing companies to delete models trained on illegal data) in cases like *Rite Aid*, effectively creating a common-law precedent for AI compliance based on [Executive Order 14110](https://www.google.com/search?q=https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/).
+Executive Order 14110 on safe, secure and trustworthy AI was [revoked on 20 January 2025](https://www.govinfo.gov/content/pkg/FR-2025-01-28/html/2025-01901.htm) by Executive Order 14148. An earlier version of this article treated it as the foundation of federal AI enforcement, which was wrong even before its revocation: the FTC acts under Section 5 of the FTC Act, not under the order. With no comprehensive federal AI statute that I am aware of, accountability comes through three channels: the FTC’s power over unfair and deceptive practices, existing anti-discrimination law, and private litigation. In [Mobley v. Workday*](https://www.proskauer.com/blog/ai-bias-lawsuit-against-workday-reaches-next-stage-as-court-grants-conditional-certification-of-adea-claim), for instance, a federal court granted preliminary certification in May 2025 of an age-discrimination collective action against an AI hiring vendor, on the theory that the vendor acted as an agent of employers.
 
 ## Case Study 1: Microsoft’s Tay Chatbot (2016)
 
 *
 
-**Background**: Microsoft launched [Tay](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) on Twitter as an experiment in conversational understanding. Within 24 hours, the system was corrupted by user interactions, producing hate speech and necessitating an immediate shutdown.
+Microsoft launched Tay on Twitter in March 2016 as an experiment in conversational understanding, aimed at 18-to 24-year-olds in the United States. The bot learned from the people who talked to it, and that was the flaw. [Microsoft’s own post-mortem](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) says that within the first 24 hours a coordinated group of users exploited a vulnerability, and that the company had prepared for many kinds of abuse but made a critical oversight for this specific attack. Tay went from friendly greetings to racist, misogynistic and extremist posts, Microsoft took it offline and apologised, and a short relaunch days later also failed.
 
-**The Story**: In March 2016, Microsoft released Tay, a chatbot designed to learn from user interactions to mimic the “voice” of a 19-year-old American girl. The goal was to showcase advances in Natural Language Processing (NLP). However, the model lacked sufficient filters for malicious input. Trolls on Twitter quickly discovered they could manipulate the bot by feeding it offensive prompts (“repeat after me…”). Within 16 hours, Tay transitioned from posting friendly greetings to generating virulent racist, misogynistic, and extremist content. Microsoft suspended the account and issued an apology, citing a “coordinated attack.”
+Tay is the textbook case of data poisoning and of naive online learning. A system that treats unfiltered public input as training signal hands control of its behaviour to the most motivated users. It also shows why the phrase “coordinated attack” is not a defence. If adversarial users are foreseeable, and on a public social platform they always are, then adversarial testing is part of the design duty, not a post-hoc excuse.
 
-**The Lesson**: Tay remains the textbook example of **Data Poisoning** and the failure of “naïve” learning in public spaces. It demonstrated that AI operating in the wild cannot blindly accept user input as training data. It also highlighted the reputational risk of deploying models without robust content moderation “guardrails.”
-
-**Legal Implications**
-
-- **Intermediary Liability:** In 2016, platforms were largely shielded by “Safe Harbor” laws (like Section 230 in the US). Today, under the **UK Online Safety Act** and **EU Digital Services Act**, a platform that generates illegal content (rather than just hosting it) faces significantly higher liability.
-
-- **Harassment:** The content generated raised potential violations under the **UK Equality Act 2010** regarding harassment and hate speech regulations.
-
-**Relevant Regulation**
-
-- **EU Digital Services Act (DSA):** Modern regulations now require risk assessments for systemic risks, including the amplification of illegal content.
-
-- **GDPR Article 22:** Highlights the risks of automated profiling without human oversight.
+The legal position has moved since 2016. Intermediary immunities such as Section 230 in the United States were designed for hosting other people’s speech, and whether they cover content a company’s own model generates is contested. The EU Digital Services Act requires very large platforms to assess systemic risks from illegal content, and the Online Safety Act’s duties reach some generative AI services. A bot that produces unlawful content on its own account is a much harder case for the operator than a platform hosting a user’s post. My original draft linked Tay to the Equality Act 2010, which I now think was a stretch: Tay was a US experiment, and the more useful comparison is how today’s regulators would treat a model that generates harassment or hate speech.
 
 ## Case Study 2: Amazon’s Biased Recruitment AI (2018)
 
-**Background**: Amazon attempted to build an automated tool to screen job applicants. The project was abandoned after it was discovered the AI penalised female candidates due to historical biases in the training data. **Source:** [Reuters Special Report](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/)
+Reuters reported in [October 2018](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G) that Amazon’s machine-learning team had been building a recruiting engine since 2014 that scored candidates from one to five stars. The models were trained on ten years of CVs submitted to the company, a pool dominated by men, so the system learned to prefer male candidates. It penalised CVs containing the word “women’s”, as in a women’s chess club captain, and downgraded graduates of two all-women’s colleges. Reuters’ sources said engineers edited the system to neutralise those specific terms but could not be sure other forms of discrimination would not emerge, and the effort was ultimately abandoned. Amazon’s position was that the tool was never used by recruiters to evaluate candidates, while Reuters’ sources said recruiters looked at its recommendations without relying on them alone.
 
-**The Story**: Between 2014 and 2017, Amazon engineers developed an AI engine to rate job applicants from one to five stars. The system was trained on 10 years of historical CVs submitted to the company—a dataset dominated by men. Consequently, the model “learned” that male candidates were preferable. It began systematically downgrading CVs containing the word “women’s” (e.g., “women’s chess club captain”) and penalising graduates of two all-female colleges. When the bias was discovered during internal testing, Amazon attempted to patch it, but ultimately scrapped the project in 2018 as they could not guarantee other forms of bias wouldn’t emerge.
+The lesson is historical bias encoding. If past decisions reflect a prejudiced reality, a model trained on them will reproduce that prejudice at scale, and removing the obvious proxy words does not remove the pattern, because the model can find new proxies. This is why the fix is testing outcomes across groups, not scrubbing a list of terms.
 
-**The Lesson**: This case illustrates **Historical Bias Encoding**. If the past data reflects a prejudiced reality (the “glass ceiling”), the AI will not only replicate that prejudice but automate and scale it. It set the precedent that “blind” algorithms can still produce discriminatory outcomes (Disparate Impact).
-
-**Legal Implications**
-
-- **Employment Discrimination:** Such a tool, if deployed, would likely violate **Title VII of the US Civil Rights Act** and **Section 39 of the UK Equality Act 2010**.
-
-- **Disparate Impact:** The legal doctrine that a policy (or algorithm) can be illegal if it disproportionately hurts a protected group, even if there was no intent* to discriminate.
-
-**Relevant Case Law**
-
-- ***Griggs v. Duke Power Co.* (1971):** The foundational US Supreme Court case establishing the “Disparate Impact” doctrine, which is now applied to algorithmic fairness.
-
-- **EU AI Act (Reference):** AI systems used for recruitment are now classified explicitly as **“High Risk”** (Annex III), requiring strict conformity assessments and human oversight.
+The legal doctrine that matters here is disparate impact: a neutral practice can be unlawful if it disproportionately disadvantages a protected group and cannot be justified. In the United States it comes from [Griggs v. Duke Power Co.* (1971)](https://supreme.justia.com/cases/federal/us/401/424/) and operates through Title VII of the Civil Rights Act. In Great Britain the equivalent is indirect discrimination under [section 19 of the Equality Act 2010](https://www.legislation.gov.uk/ukpga/2010/15/section/19), and employers’ duties toward applicants sit in [section 39](https://www.legislation.gov.uk/ukpga/2010/15/section/39). The vendor question is now live in court: *Mobley v. Workday*, discussed above, tests whether a software provider can be liable as an employer’s agent. In the EU, recruitment AI is a high-risk use under Annex III of the AI Act, with obligations now due from 2 December 2027.
 
 ## Case Study 3: Air Canada’s “Lying” Chatbot (2024)
 
 *
 
-**Background**: A Civil Resolution Tribunal ruled that a company is liable for negligent misrepresentation when its AI chatbot provides false information, rejecting the defence that the AI is a distinct legal entity. **Official Ruling:** [Moffatt v. Air Canada, 2024 BCCRT 149](https://www.google.com/search?q=https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html)
+After his grandmother died in November 2022, Jake Moffatt booked a flight with Air Canada and asked its website chatbot about bereavement fares. The chatbot told him he could book at the full price and apply for the reduced fare afterwards, within 90 days. That contradicted the airline’s actual policy, which sat on a linked page and did not allow retroactive claims. Air Canada refused the refund, and the dispute went to British Columbia’s Civil Resolution Tribunal.
 
-**The Story**: In 2022, Jake Moffatt, a passenger travelling for a funeral, asked Air Canada’s AI chatbot about bereavement fares. The chatbot explicitly stated he could apply for the discount retroactively* within 90 days of travel—a “hallucination” that directly contradicted the airline’s actual policy (which required pre-approval). When Moffatt applied for the refund, Air Canada denied it. In the resulting legal battle (Moffatt v. Air Canada), the airline attempted a novel defence: it argued that the chatbot was a “separate legal entity” responsible for its own actions, and the airline itself was not liable for the bot’s “misleading words.”
+In [Moffatt v. Air Canada*, 2024 BCCRT 149](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), decided on 14 February 2024, the tribunal found negligent misrepresentation. It held that Air Canada owed a duty of care, had not taken reasonable care to ensure the chatbot was accurate, and could not treat the chatbot as a separate legal entity responsible for its own actions: the chatbot was part of the airline’s website. It also rejected the idea that a customer should cross-check the chatbot against another page. Damages were C$650.88, the difference between the fare paid and the bereavement fare, plus interest and fees. The [American Bar Association](https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/) and Canadian law firms have treated the reasoning as a useful signal for chatbot operators.
 
-**The Lesson**: This case killed the “beta test” defence for corporate AI. It established that companies cannot decouple themselves from their automated agents. If a chatbot is placed on a commercial website to serve customers, the company is as responsible for its output as it would be for a static webpage or a human agent. Accuracy is a non-negotiable duty of care.
-
-**Legal Implications**
-
-- **Negligent Misrepresentation:** The tribunal found the airline failed to take “reasonable care” to ensure the accuracy of its chatbot.
-
-- **Rejection of “Separate Entity” Defence:** The ruling clarified that an AI tool is part of the vendor’s service, not an independent agent with its own liability shield.
-
-**Relevant Case Law**
-
-- ***Moffatt v. Air Canada*, 2024 BCCRT 149** (Civil Resolution Tribunal)
-
-*Key Holding:* Companies are liable for specific promises made by their AI agents, even if those promises contradict other Terms of Service.
+I want to be precise about its weight. This is a small-claims tribunal decision, so it is persuasive rather than binding, and commentators have noted that the tribunal said little about why the airline’s conduct was negligent because Air Canada offered it almost no information about how the chatbot worked. The money was trivial. The principle is not: a company that puts an AI system in front of customers should expect to answer for what it says, and linking to the real policy does not cure a wrong summary. Practically, that means constraining a customer-facing model to verified sources, logging what it says, and designing a path to a human with authority to correct it.
 
 ## Case Study 4: Rite Aid’s Biometric Ban (2024)
 
 *
 
-**Background**: The US Federal Trade Commission (FTC) banned pharmacy chain Rite Aid from using facial recognition for five years after its system was found to disproportionately misidentify minorities as shoplifters. **Official Order:** [FTC Decision & Order (Docket No. C-4809)](https://www.ftc.gov/legal-library/browse/cases-proceedings/2023190-rite-aid-corporation-ftc-v)
+Between 2012 and 2020, Rite Aid used facial recognition in hundreds of stores to flag people it suspected of shoplifting. In December 2023 the [Federal Trade Commission announced](https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without) a federal court complaint and a [proposed stipulated order](https://www.ftc.gov/system/files/ftc_gov/pdf/2023190_riteaid_stipulated_order_filed.pdf) alleging that the system generated thousands of false matches and that Rite Aid had not taken reasonable steps to prevent harm. The FTC said the company did not test or inquire about accuracy before deployment, did not prevent low-quality images from being used, did not adequately train staff who acted on match alerts, and did not track false positives afterwards. It also alleged the harm fell disproportionately on people of colour and women. Rite Aid, which was in Chapter 11 bankruptcy at the time, said it disagreed with the allegations and described the programme as a pilot in a limited number of stores.
 
-**The Story**: Between 2012 and 2020, Rite Aid deployed facial recognition technology in hundreds of stores to identify “persons of interest” (suspected shoplifters). The system, however, was plagued by poor image quality and algorithmic bias. According to the FTC complaint, the system falsely flagged legitimate customers as criminals, leading to public humiliation and ejection from stores. Crucially, the technology generated false positive matches for Black, Asian, and Latino faces at a significantly higher rate than for White faces—a known issue in biometric training data that Rite Aid failed to test for or mitigate.
+The remedy is what made the case notable. Rite Aid was barred from using facial recognition for surveillance for five years and ordered to delete the images it had collected and any algorithms developed from them. Lawyers at [Mintz](https://www.mintz.com/insights-center/viewpoints/54731/2024-01-23-algorithmic-disgorgement-increasingly-important-part) describe it as the FTC’s first use of its Section 5 unfairness authority against an allegedly discriminatory use of AI. It was not the first use of model deletion, though. The FTC began using what is called algorithmic disgorgement with Cambridge Analytica in 2019 and applied it again in Everalbum, WW International and Kurbo, and Edmodo. I corrected this point because my earlier version said Rite Aid introduced the remedy, and it did not.
 
-**The Lesson**: This case introduces the concept of **“Algorithmic Disgorgement.”** As part of the settlement, Rite Aid wasn’t just fined; it was ordered to delete* all the biometric data it had collected and any models trained on that data. It serves as a warning that using “off-the-shelf” AI for high-stakes surveillance without rigorous, demographic-specific testing is a violation of consumer protection laws.
-
-**Legal Implications**
-
-- **Unfair Trade Practices:** The FTC classified the deployment of untested, biased surveillance in retail settings as an “unfair” practice under Section 5 of the FTC Act.
-
-- **Algorithmic Disgorgement:** A regulatory remedy requiring the deletion of ill-gotten data and the algorithms built upon it.
-
-**Relevant Regulation**
-
-- **FTC Order (Docket No. C-4809):** *In the Matter of Rite Aid Corporation*
-
-- **EU AI Act (Reference):** This type of “real-time remote biometric identification” in publicly accessible spaces is now classified as **“Unacceptable Risk”** (Prohibited) or **“High Risk”** under the new EU framework (Article 5).
+Two further corrections. First, an FTC order binds the company that signs it. It is not common law and it does not create precedent in the way a court judgment does, although it signals what the agency considers unreasonable. Second, the EU treatment of this kind of system is more nuanced than “banned”. The AI Act prohibits certain real-time remote biometric identification in publicly accessible spaces for law enforcement, with exceptions, while remote biometric identification more generally is a high-risk use, and biometric data also engages GDPR Article 9. A private retailer in the EU would be looking at high-risk obligations and data protection law rather than an outright Article 5 ban.
 
 ## Case Study 5: The Hong Kong Deepfake CFO (2024)
 
-*
+In January 2024, a finance employee in the Hong Kong office of the engineering firm Arup received what looked like a message from the company’s UK chief financial officer asking for a confidential transaction. He suspected phishing. He then joined a video call in which the CFO and other colleagues appeared and spoke, and every participant other than him was a deepfake. His doubts were put aside, and he made 15 transfers totalling HK$200 million, about US$25.6 million. Arup notified Hong Kong police that month and confirmed the incident in [May 2024](https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk), saying its financial stability and operations were unaffected and that no internal systems were compromised.
 
-**Background**: A finance employee at a multinational firm (Arup) was tricked into transferring **$25.5 million** to scammers after attending a video conference where every other participant* was a deepfake. **Source:** [CNN Business Report](https://edition.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk/index.html)
+An earlier version of this article said the employee requested the video call as a precaution. The public reporting does not support that. What it does support is a more uncomfortable point: the video call was the thing that overcame a correct suspicion. Seeing and hearing familiar colleagues is no longer evidence of identity, and any control that relies on it is broken.
 
-**The Story**: The employee initially received a suspicious email from the company’s “CFO” requesting a secret transaction. Prudently, the employee requested a video call to verify. The scammers obliged. Using deepfake technology, they generated live video and audio of the CFO *and* several other colleagues, all of whom appeared to be present on the conference call. Seeing trusted faces and hearing familiar voices, the employee’s doubts vanished, and they authorised 15 transfers totalling HK$200 million ($25.5 million USD). The fraud was only discovered days later when the employee checked with the head office.
+I would not go as far as my earlier claim that human-in-the-loop oversight is obsolete. The failure here was weak, in-band verification: the employee checked the request through the same channel the attacker controlled. The remedy is out-of-band verification (calling back on a number you already hold), dual authorisation for large or unusual payments, transaction limits, and a rule that urgency and secrecy are triggers for more checking, not less. Hardware-bound approvals such as FIDO2 security keys can protect who is authorising a payment. Content provenance standards such as [C2PA](https://c2pa.org/specifications/) help establish where recorded media came from, but they do not authenticate a live call. On the legal side, whether crime or cyber insurance responds to a deepfake-enabled transfer depends on the policy wording, and it is a question to put to your broker before an incident, not after.
 
-**The Lesson**: “Human-in-the-loop” is no longer a sufficient security control. If human senses (sight and sound) can be deceived by real-time generative AI, verification must move to the hardware level. Companies must now rely on **cryptographic verification** (FIDO2 keys, digital signatures) rather than video presence to authorise high-value actions.
+## Beyond the Five: Amazon Rekognition
 
-**Legal Implications**
+A sixth case deserves a short place here because it is one of the most searched examples of facial recognition bias. In July 2018 the ACLU [reported](https://www.aclu.org/press-releases/amazon-facial-surveillance-technology-falsely-identifies-28-members-congress-mugshots) that Amazon’s Rekognition service falsely matched 28 members of Congress to a database of 25,000 arrest photos, using the service’s default settings, with people of colour disproportionately affected. Amazon disputed the test, arguing that a higher confidence threshold should have been used for law enforcement. That argument is itself the lesson: when a vendor’s default setting is not suitable for a high-stakes use, the burden falls on whoever configures it, and customers rarely know that. In June 2020 Amazon announced a [one-year moratorium](https://techcrunch.com/2020/06/10/amazon-rekognition-moratorium) on police use of the service. The US National Institute of Standards and Technology reported in 2019 that Amazon had not submitted its algorithm to its demographic testing programme.
 
-- **Duty of Care in Cybersecurity:** Raises new questions about what constitutes “reasonable security measures” for corporate finance.
+## What Successful Bias Mitigation Looks Like
 
-- **Insurance Coverage:** Many “Cyber Insurance” and “Crime” policies have exclusions for “voluntary transfers” (social engineering), potentially leaving companies uncovered for deepfake fraud unless policies are specifically updated.
+Readers often ask for success stories, and I think the honest answer is that the public record is thinner than vendor marketing suggests. The strongest independent evidence comes from testing, not from claims. NIST’s [demographic effects study (NISTIR 8280)](https://nvlpubs.nist.gov/nistpubs/ir/2019/nist.ir.8280.pdf) evaluated 189 algorithms from 99 developers and found that false positive rates often varied by factors of 10 to over 100 between demographic groups, but also that algorithms differ markedly, and some showed no dramatic differential. That finding is the practical basis for mitigation: the choice of system, and measuring it on the population you will actually serve, changes outcomes.
 
-**Relevant Regulation**
+The most concrete checklist of what reasonable mitigation involves is, ironically, the list of failures in the Rite Aid complaint: test accuracy before deployment, ask vendors for evidence, control image quality, train the humans who act on alerts, and monitor false positives afterwards. In the cases in this article, the closest thing to a successful mitigation was Amazon’s decision to abandon a recruiting tool when it could not guarantee fairness. That is a legitimate outcome, and one that governance processes should make easier, not harder.
 
-- **UK Online Safety Act 2023:** While this case occurred in Hong Kong, under the UK’s new laws, platforms hosting the tools used to create non-consensual deepfakes or facilitate fraud face new “duties of care” to prevent such illegal content.
+## Lessons Learned and Best Practice (Updated for 2026)
 
-### Lessons Learned & Best Practices (Updated for 2026)
+### 1. Test adversarially and test by group
 
-The failures of the last decade have taught us a harsh truth: technical fixes alone are insufficient. In 2026 and beyond, ethical and legal safeguards must be baked into the lifecycle of every system—from data collection through to post-market monitoring.
+Tay shows why red-teaming has to include hostile users, and Rite Aid and Rekognition show why accuracy must be measured per demographic group on realistic data. Run ethical impact assessments before launch and keep them current as the system changes. Test customer-facing language models for invented policy, the failure at the centre of the Air Canada case.
 
-Below are actionable lessons grounded in current regulatory standards and the latest high-profile failures.
+### 2. Know your data and be ready to lose your model
 
-#### 1. Ethical Testing & Impact Assessment
+Document where training data came from, under what consent and with what limits. Algorithmic disgorgement means a regulator can order deletion of models built on data that should not have been collected, so if you cannot separate tainted data from clean data you may have to give up the whole model. Commission independent audits focused on disparate impact for any system that affects employment, credit, housing or access to services.
 
-- **Pre-deployment Ethical Impact Assessments (EIAs):** Use published methodologies to map harms, stakeholders, and mitigations *before* a single line of code is deployed. EIAs must be versioned documents that evolve with the system.
+### 3. Assign accountability to named people
 
-- **Adversarial “Red-Teaming”:** Do not rely on standard QA. Perform adversarial attacks, misuse scenarios, and input-manipulation tests (e.g., “jailbreaking”) to reveal failure modes early.
+Treat your system’s outputs as statements the company has made. Give model risk a named owner, set up review by people with technical, legal and domain expertise, and write indemnities and transparency requirements (model cards, audit reports) into vendor contracts. The Workday* litigation is a reminder that vendors and customers both end up in the dock.
 
-- **Hallucination Stress Testing:** Following the *Air Canada* ruling, systems must be tested for “policy invention.” Ensure your RAG (Retrieval-Augmented Generation) systems cannot override your Terms of Service.
+### 4. Verify identity outside the channel that is under attack
 
-- **Standards-Based Well-being Metrics:** Integrate practices from **IEEE 7010** (Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-being) to measure societal impact beyond mere accuracy.
+Use call-backs on known numbers, dual authorisation, payment limits and cooling-off periods for urgent or secret requests. Treat any request that arrives with unusual pressure as a prompt to verify, not a reason to hurry.
 
-#### 2. Bias Mitigation & “Disgorgement” Readiness
+### 5. Monitor after launch and keep a way to stop
 
-- **Data Lineage & Provenance:** Document datasets with **datasheets** that record origin, consent, and limitations.
+Measure fairness and safety in production, not just in the lab. Define in advance who can pause, roll back or override a model that starts causing harm, and give users a route to challenge an automated decision and reach a human who can change it. The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) and ISO/IEC TR 24368 offer structures for doing this.
 
-- **Prepare for Algorithmic Disgorgement:** As seen in the *Rite Aid* case, regulators can order the destruction of models trained on biased or ill-gotten data. If you cannot segregate your data, you risk losing the entire model.
+### Quick checklist for product teams
 
-- **Regular Algorithmic Audits:** Combine internal checks with independent third-party audits focused on disparate impact, calibration, and fairness for protected groups.
+- Run an ethical impact assessment and an adversarial red-team exercise before launch.
 
-- **Technical Mitigations:** Employ debiasing, differential privacy, and thresholding where appropriate; explicitly measure and document the tradeoffs between accuracy and fairness.
+- Test accuracy and error rates for each demographic group you will serve.
 
-#### 3. Governance & Corporate Liability
+- Create a model card and a datasheet, and attach both to procurement documents.
 
-- **Strict Liability for AI Agents:** Treat your AI’s output as legally binding. Companies can no longer claim a chatbot is a “separate legal entity.” If the AI promises a refund, you may be liable to pay it.
+- Constrain customer-facing models to verified sources and prevent them from making financial or policy commitments.
 
-- **Multi-Stakeholder Ethics Boards:** Create governance bodies with technical, legal, and domain representation to review high-risk systems.
+- Confirm whether your insurance covers software and AI claims under the new EU Product Liability Directive for products placed on the EU market after 9 December 2026.
 
-- **Clear Accountability Paths:** Assign specific “owners” for model risk. Who goes to jail or pays the fine if the model discriminates? This must be defined in the org chart.
+- Require out-of-band verification and dual approval for high-value payments.
 
-- **Procurement Controls:** Require vendors to provide transparency artifacts (Model Cards, Audit Reports) and contractual indemnities for AI failures.
+- Define and rehearse a kill-switch and rollback procedure.
 
-#### 4. Security & Deepfake Defense
-
-- **Zero-Trust Verification:** The *Hong Kong Deepfake* case proves that “human-in-the-loop” visual verification is obsolete.
-
-- **Hardware-Based Authentication:** For high-value transactions, move beyond video calls. Require cryptographic verification (such as FIDO2 hardware keys) or adopt content provenance standards like **[C2PA](https://c2pa.org/)** (Coalition for Content Provenance and Authenticity) to digitally sign authentic media.
-
-- **Duty of Care in Cybersecurity:** Update insurance policies and internal protocols to recognize that social engineering now possesses “perfect” mimicry capabilities.
-
-#### 5. Post-Market Monitoring & Redress
-
-- **Continuous Runtime Monitoring:** Deploy drift detection and incident logging. Fairness and safety metrics must be measured in production, not just in the lab.
-
-- **Rapid Remediation Lanes:** Define a “Kill Switch.” Operational teams must know exactly how to pause, rollback, or hard-code overrides for a model that begins generating harm in real-time.
-
-- **Transparency and Redress:** Publish clear complaint mechanisms. Users must have a way to challenge an automated decision and reach a human who has the authority to overturn it.
-
-### Quick Practical Checklist (For Product Teams)
-
-- [ ] **Run an EIA and Red-Team** exercise before public launch.
-
-- [ ] **Create a Model Card** and Datasheet; attach both to procurement docs.
-
-- [ ] **Implement “Guardrails”** that prevent the AI from making financial or policy commitments (prevents *Air Canada* scenarios).
-
-- [ ] **Check Insurance Coverage:** Ensure your policy covers “Strict Liability” for software products under the new EU Product Liability Directive (2024/2853).
-
-- [ ] **Establish a “Kill Switch”** protocol for rapid remediation.
-
-- [ ] **Commission an External Audit** annually for high-impact systems.
+- Commission an independent audit at least annually for high-impact systems.
 
 **Selected further reading & sources:** *IEEE 7010; ACM Code of Ethics; Alan Turing Institute “Understanding AI Ethics and Safety” (2019); ISO/IEC TR 24368:2022; EU AI Act post-market provisions; * *OSTP Blueprint for an AI Bill of Rights; **[C2PA Technical Standard](https://c2pa.org/specifications/specifications/1.3/explainer/Explainer.html)**.*
 
+## Frequently Asked Questions
+
+### Are companies legally liable for what their AI chatbots say?
+
+In some circumstances, yes. In Moffatt v. Air Canada (2024 BCCRT 149), a British Columbia tribunal held the airline liable for negligent misrepresentation by its chatbot and rejected the argument that the bot was a separate entity. It is a small-claims decision, so persuasive rather than binding, but the reasoning is consistent with general principles of misrepresentation.
+
+### When do the EU AI Act’s high-risk rules apply?
+
+Following the AI Omnibus (Regulation (EU) 2026/1744), stand-alone high-risk systems under Annex III apply from 2 December 2027, and high-risk AI embedded in regulated products from 2 August 2028. Prohibited practices have applied since February 2025, and general-purpose AI model obligations were not postponed.
+
+### What is algorithmic disgorgement?
+
+It is a remedy that requires a company to delete not only improperly obtained data but also the models or algorithms built from it. The US FTC first used it against Cambridge Analytica in 2019 and again in the Everalbum, WW International and Kurbo, Edmodo and Rite Aid matters.
+
+### Is the Council of Europe AI Convention in force?
+
+Not as of October 2026. The treaty needs five ratifications, including three from Council of Europe member states, and a three-month waiting period. The European Union ratified it in May 2026.
+
+### Can a video call still be trusted to verify someone’s identity?
+
+Not on its own. In the 2024 Arup case, a finance employee was persuaded by a deepfaked video call to transfer about US$25.6 million. Organisations should verify high-value requests through an independent channel and require a second approver.
+
+### Is the EU Product Liability Directive already in effect?
+
+Not yet for practical purposes. Directive (EU) 2024/2853 must be transposed by 9 December 2026 and applies to products placed on the market after that date. It treats software, including AI systems, as a product subject to strict liability.
+
 ## Conclusion
 
-The examination of AI ethics failures provides crucial insights for the road ahead. We have transitioned from the “Wild West” era of 2016 to the “Strict Liability” era of 2026. As demonstrated in the landmark *[Moffatt v. Air Canada](https://www.google.com/search?q=https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html)* ruling, the defense that an AI is a “separate entity” is no longer valid in a court of law.
+Read together, these cases show a consistent pattern. The technical failures are different: poisoned input, biased training data, invented answers, untested deployment, defeated verification. The consequence is the same. Regulators and courts are moving towards holding the deploying organisation responsible for what its systems do, and the controls they find missing are mundane ones: testing, documentation, accountable owners and monitoring.
 
-For organizations today, ethical AI is no longer just a matter of conscience; it is a matter of compliance. The lessons learned from these case studies—specifically regarding data provenance, hallucination control, and human oversight—must be baked into the technical architecture of every system before it ever touches a real-world user.
+The picture is also less settled than headlines suggest. Key EU dates have moved, the main international treaty is not yet in force, US federal policy has changed direction, and some of the most cited decisions carry limited legal weight. Anyone relying on a compliance summary, including this one, should check the primary sources linked below and the date of the last update. For my wider position on AI governance, see my [stance on AI](https://www.claudeusercontent.com/stance/), my [background](https://www.claudeusercontent.com/my-story/) and my other [articles](https://www.claudeusercontent.com/articles/).
+
+**Update note, 26 October 2026.** This article was substantially revised. Corrections to earlier versions: the EU high-risk date (previously August 2026), the status of US Executive Order 14110 (revoked in January 2025 and never the basis of FTC enforcement), the date of the Global Digital Compact (September 2024), the start of the new EU product liability regime (products placed on the market after 9 December 2026), the description of Rite Aid as the first algorithmic disgorgement case, the Rite Aid case citation (a federal court complaint and stipulated order, not an administrative docket), and the claim that the Arup employee requested the video call.
 
 ## References
 
-- **Civil Resolution Tribunal.** (2024). *Moffatt v. Air Canada*, 2024 BCCRT 149.
+- Civil Resolution Tribunal of British Columbia. (2024). [*Moffatt v. Air Canada*, 2024 BCCRT 149](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do).
 
-- **European Parliament.** (2024). *Regulation (EU) 2024/1689 (The AI Act)*. Official Journal of the European Union.
+- Council of Europe. (2024). [Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)](https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence).
 
-- **Federal Trade Commission.** (2024). *Rite Aid Corporation & Effecting an Algorithmic Disgorgement*. Docket No. C-4809.
+- European Union. (2024). [Regulation (EU) 2024/1689 (Artificial Intelligence Act)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj).
 
-- **Floridi, L., & Cowls, J.** (2019). “A Unified Framework of Five Principles for AI in Society.” *Harvard Data Science Review*, 1(1).
+- European Union. (2026). [Regulation (EU) 2026/1744 (AI Omnibus)](https://eur-lex.europa.eu/eli/reg/2026/1744/oj).
 
-- **Mittelstadt, B. D., et al.** (2016). “The Ethics of Algorithms: Mapping the Debate.” *Big Data & Society*, 3(2).
+- European Union. (2024). [Directive (EU) 2024/2853 on liability for defective products](https://eur-lex.europa.eu/eli/dir/2024/2853/oj).
 
-- **NIST.** (2019). *Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects*. U.S. Department of Commerce.
+- Federal Trade Commission. (2023). [Rite Aid banned from using AI facial recognition after FTC says retailer deployed technology without reasonable safeguards](https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without), and [stipulated order](https://www.ftc.gov/system/files/ftc_gov/pdf/2023190_riteaid_stipulated_order_filed.pdf).
 
-- **Stanford HAI.** (2025). *Artificial Intelligence Index Report 2025*. Stanford University.
+- Dastin, J. (2018). [Amazon scraps secret AI recruiting tool that showed bias against women](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G). Reuters.
 
-- **UNESCO.** (2021). *Recommendation on the Ethics of Artificial Intelligence*. Paris: UNESCO.
+- Lee, P. (2016). [Learning from Tay’s introduction](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/). Microsoft.
+
+- Magramo, K. (2024). [British engineering giant Arup revealed as victim of $25 million deepfake scam](https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk). CNN.
+
+- ACLU. (2018). [Amazon facial surveillance technology falsely identifies 28 members of Congress with mugshots](https://www.aclu.org/press-releases/amazon-facial-surveillance-technology-falsely-identifies-28-members-congress-mugshots).
+
+- Grother, P., Ngan, M., & Hanaoka, K. (2019). [Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects (NISTIR 8280)](https://nvlpubs.nist.gov/nistpubs/ir/2019/nist.ir.8280.pdf). NIST.
+
+- Stanford HAI. (2026). [Artificial Intelligence Index Report 2026](https://hai.stanford.edu/ai-index).
+
+- United Nations General Assembly. (2025). [Resolution A/RES/79/325](https://www.un.org/pga/wp-content/uploads/sites/110/2025/12/A_RES_79_325-EN.pdf).
+
+- United States. (2025). [Executive Order 14148, Initial Rescissions of Harmful Executive Orders and Actions](https://www.govinfo.gov/content/pkg/FR-2025-01-28/html/2025-01901.htm).
+
+- Floridi, L., & Cowls, J. (2019). [A unified framework of five principles for AI in society](https://doi.org/10.1162/99608f92.8cd550d1). *Harvard Data Science Review*, 1(1).
+
+- Mittelstadt, B. D., et al. (2016). [The ethics of algorithms: Mapping the debate](https://doi.org/10.1177/2053951716679679). *Big Data & Society*, 3(2).
+
+- NIST. [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework).
+
+- UNESCO. (2021). [Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics).
 
 ### 📚 Further Reading
 
