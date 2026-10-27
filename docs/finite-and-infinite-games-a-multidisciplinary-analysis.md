@@ -21,8 +21,6 @@ source: "https://aviperera.com"
 
 The concepts of finite and infinite games, introduced by James P. Carse in his 1986 book “**Finite and Infinite Games**,” provide a powerful framework for understanding various aspects of human interaction, strategy, and decision-making. This analysis will explore these concepts through the lenses of mathematics, game theory, first principles, real-life contexts, artificial intelligence, and international relations.
 
-.kb-table-of-content-nav.kb-table-of-content-id2118_3d74ab-41 .kb-table-of-content-wrap{padding-top:var(--global-kb-spacing-sm, 1.5rem);padding-right:var(--global-kb-spacing-sm, 1.5rem);padding-bottom:var(--global-kb-spacing-sm, 1.5rem);padding-left:var(--global-kb-spacing-sm, 1.5rem);}.kb-table-of-content-nav.kb-table-of-content-id2118_3d74ab-41 .kb-table-of-contents-title-wrap{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.kb-table-of-content-nav.kb-table-of-content-id2118_3d74ab-41 .kb-table-of-contents-title{font-weight:regular;font-style:normal;}.kb-table-of-content-nav.kb-table-of-content-id2118_3d74ab-41 .kb-table-of-content-wrap .kb-table-of-content-list{font-weight:regular;font-style:normal;margin-top:var(--global-kb-spacing-sm, 1.5rem);margin-right:0px;margin-bottom:0px;margin-left:0px;}
-
 ## 2. Mathematical and Game Theoretical Framework
 
 ### 2.1 Finite Games
@@ -50,6 +48,8 @@ Key characteristics:
 The **Prisoner’s Dilemma** is a fundamental problem in game theory that illustrates how two individuals, acting in their self-interest, can end up with a worse outcome than if they had cooperated. In this scenario, two suspects are arrested and interrogated separately; they can either cooperate with each other by remaining silent or betray each other by confessing. If both cooperate, they receive a light sentence, but if one defects while the other cooperates, the defector goes free while the co-operator gets a heavy sentence. If both defect, they receive moderate sentences. The rational choice for each suspect is to defect, leading to a Nash equilibrium where both end up worse off than if they had cooperated. This dilemma highlights the challenges of cooperation and trust in decision-making, with implications in economics, politics, and social interactions, demonstrating how individual rationality can lead to collectively irrational outcomes.
 
 CooperateDefectCooperate(-1, -1)(-3, 0)Defect(0, -3)(-2, -2)
+
+.kadence-column2118_9380c0-c2 > .kt-inside-inner-col{column-gap:var(--global-kb-gap-sm, 1rem);}.kadence-column2118_9380c0-c2 > .kt-inside-inner-col{flex-direction:column;}.kadence-column2118_9380c0-c2 > .kt-inside-inner-col > .aligncenter{width:100%;}.kadence-column2118_9380c0-c2 > .kt-inside-inner-col{background-color:var(--kb-token--primitive--color--neutral--300);}.kadence-column2118_9380c0-c2 > .kt-inside-inner-col:before{opacity:0.3;}.kadence-column2118_9380c0-c2{position:relative;}@media all and (max-width: 1024px){.kadence-column2118_9380c0-c2 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}@media all and (max-width: 767px){.kadence-column2118_9380c0-c2 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}
 
 ### 2.2 Infinite Games
 
@@ -80,6 +80,8 @@ The **Iterated Prisoner’s Dilemma** involves players repeatedly engaging in th
 - Players repeatedly face the Prisoner’s Dilemma scenario
 
 - Strategies like Tit-for-Tat can emerge, focusing on long-term cooperation
+
+.kadence-column2118_205d5d-f5 > .kt-inside-inner-col{column-gap:var(--global-kb-gap-sm, 1rem);}.kadence-column2118_205d5d-f5 > .kt-inside-inner-col{flex-direction:column;}.kadence-column2118_205d5d-f5 > .kt-inside-inner-col > .aligncenter{width:100%;}.kadence-column2118_205d5d-f5 > .kt-inside-inner-col{background-color:var(--kb-token--primitive--color--neutral--300);}.kadence-column2118_205d5d-f5 > .kt-inside-inner-col:before{opacity:0.3;}.kadence-column2118_205d5d-f5{position:relative;}@media all and (max-width: 1024px){.kadence-column2118_205d5d-f5 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}@media all and (max-width: 767px){.kadence-column2118_205d5d-f5 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}
 
 ## 3. First Principles Explanation
 
@@ -131,6 +133,8 @@ The **Iterated Prisoner’s Dilemma** involves players repeatedly engaging in th
 
 **Mathematical representation:****
 
+.kadence-column2118_209ac2-e8 > .kt-inside-inner-col{column-gap:var(--global-kb-gap-sm, 1rem);}.kadence-column2118_209ac2-e8 > .kt-inside-inner-col{flex-direction:column;}.kadence-column2118_209ac2-e8 > .kt-inside-inner-col > .aligncenter{width:100%;}.kadence-column2118_209ac2-e8 > .kt-inside-inner-col{background-color:var(--kb-token--primitive--color--neutral--300);}.kadence-column2118_209ac2-e8 > .kt-inside-inner-col:before{opacity:0.3;}.kadence-column2118_209ac2-e8{position:relative;}@media all and (max-width: 1024px){.kadence-column2118_209ac2-e8 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}@media all and (max-width: 767px){.kadence-column2118_209ac2-e8 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}
+
 ### 5.2 Infinite Games in AI
 
 - Reinforcement learning in open-ended environments:** AI agents that continuously adapt to changing conditions.
@@ -138,6 +142,8 @@ The **Iterated Prisoner’s Dilemma** involves players repeatedly engaging in th
 - **Generative AI models:** Systems like GPT-3 that engage in ongoing language understanding and generation.
 
 **Mathematical representation:****
+
+.kadence-column2118_c3e905-42 > .kt-inside-inner-col{column-gap:var(--global-kb-gap-sm, 1rem);}.kadence-column2118_c3e905-42 > .kt-inside-inner-col{flex-direction:column;}.kadence-column2118_c3e905-42 > .kt-inside-inner-col > .aligncenter{width:100%;}.kadence-column2118_c3e905-42 > .kt-inside-inner-col{background-color:var(--kb-token--primitive--color--neutral--300);}.kadence-column2118_c3e905-42 > .kt-inside-inner-col:before{opacity:0.3;}.kadence-column2118_c3e905-42{position:relative;}@media all and (max-width: 1024px){.kadence-column2118_c3e905-42 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}@media all and (max-width: 767px){.kadence-column2118_c3e905-42 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}
 
 ## 6. International Relations Examples
 
@@ -160,6 +166,8 @@ This represents a finite game with a Nash equilibrium at (Arm, Arm), despite bei
 - **Global governance:** Evolving international institutions and norms over time.
 
 **Mathematical representation:**
+
+.kadence-column2118_f6c49c-64 > .kt-inside-inner-col{column-gap:var(--global-kb-gap-sm, 1rem);}.kadence-column2118_f6c49c-64 > .kt-inside-inner-col{flex-direction:column;}.kadence-column2118_f6c49c-64 > .kt-inside-inner-col > .aligncenter{width:100%;}.kadence-column2118_f6c49c-64 > .kt-inside-inner-col{background-color:var(--kb-token--primitive--color--neutral--300);}.kadence-column2118_f6c49c-64 > .kt-inside-inner-col:before{opacity:0.3;}.kadence-column2118_f6c49c-64{position:relative;}@media all and (max-width: 1024px){.kadence-column2118_f6c49c-64 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}@media all and (max-width: 767px){.kadence-column2118_f6c49c-64 > .kt-inside-inner-col{flex-direction:column;justify-content:center;}}
 
 ## 7. Conclusion
 

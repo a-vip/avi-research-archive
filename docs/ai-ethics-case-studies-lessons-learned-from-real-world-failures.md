@@ -67,11 +67,11 @@ Executive Order 14110 on safe, secure and trustworthy AI was [revoked on 20 Janu
 
 *
 
-Microsoft launched Tay on Twitter in March 2016 as an experiment in conversational understanding, aimed at 18-to 24-year-olds in the United States. The bot learned from the people who talked to it, and that was the flaw. [Microsoft’s own post-mortem](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) says that within the first 24 hours a coordinated group of users exploited a vulnerability, and that the company had prepared for many kinds of abuse but made a critical oversight for this specific attack. Tay went from friendly greetings to racist, misogynistic and extremist posts, Microsoft took it offline and apologised, and a short relaunch days later also failed.
+Microsoft launched Tay on Twitter in March 2016 as an experiment in conversational understanding, aimed at 18-to 24-year-olds in the United States. The bot learned from the people who talked to it, and that was the flaw. [Microsoft’s own post-mortem](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) says that within the first 24 hours a coordinated group of users exploited a vulnerability, and that the company had prepared for many kinds of abuse but made a critical oversight for this specific attack. **Tay went from friendly greetings to racist, misogynistic and extremist posts**, Microsoft took it offline and apologised, and a short relaunch days later also failed.
 
-Tay is the textbook case of data poisoning and of naive online learning. A system that treats unfiltered public input as training signal hands control of its behaviour to the most motivated users. It also shows why the phrase “coordinated attack” is not a defence. If adversarial users are foreseeable, and on a public social platform they always are, then adversarial testing is part of the design duty, not a post-hoc excuse.
+Tay is the textbook case of **data poisoning** and of **naive online learning**. A system that treats unfiltered public input as training signal hands control of its behaviour to the most motivated users. It also shows why the phrase **“coordinated attack”** is not a defence. If adversarial users are foreseeable, and on a public social platform they always are, then adversarial testing is part of the design duty, not a post-hoc excuse.
 
-The legal position has moved since 2016. Intermediary immunities such as Section 230 in the United States were designed for hosting other people’s speech, and whether they cover content a company’s own model generates is contested. The EU Digital Services Act requires very large platforms to assess systemic risks from illegal content, and the Online Safety Act’s duties reach some generative AI services. A bot that produces unlawful content on its own account is a much harder case for the operator than a platform hosting a user’s post. My original draft linked Tay to the Equality Act 2010, which I now think was a stretch: Tay was a US experiment, and the more useful comparison is how today’s regulators would treat a model that generates harassment or hate speech.
+The legal position has moved since 2016. Intermediary immunities such as **Section 230** in the United States were designed for hosting other people’s speech, and whether they cover content a company’s own model generates is contested. The EU Digital Services Act requires very large platforms to assess systemic risks from illegal content, and the Online Safety Act’s duties reach some generative AI services. A bot that produces unlawful content on its own account is a much harder case for the operator than a platform hosting a user’s post. My original draft linked Tay to the Equality Act 2010, which I now think was a stretch: Tay was a US experiment, and the more useful comparison is how today’s regulators would treat a model that generates harassment or hate speech.
 
 ## Case Study 2: Amazon’s Biased Recruitment AI (2018)
 
@@ -87,23 +87,23 @@ The legal doctrine that matters here is disparate impact: a neutral practice can
 
 After his grandmother died in November 2022, Jake Moffatt booked a flight with Air Canada and asked its website chatbot about bereavement fares. The chatbot told him he could book at the full price and apply for the reduced fare afterwards, within 90 days. That contradicted the airline’s actual policy, which sat on a linked page and did not allow retroactive claims. Air Canada refused the refund, and the dispute went to British Columbia’s Civil Resolution Tribunal.
 
-In [Moffatt v. Air Canada*, 2024 BCCRT 149](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), decided on 14 February 2024, the tribunal found negligent misrepresentation. It held that Air Canada owed a duty of care, had not taken reasonable care to ensure the chatbot was accurate, and could not treat the chatbot as a separate legal entity responsible for its own actions: the chatbot was part of the airline’s website. It also rejected the idea that a customer should cross-check the chatbot against another page. Damages were C$650.88, the difference between the fare paid and the bereavement fare, plus interest and fees. The [American Bar Association](https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/) and Canadian law firms have treated the reasoning as a useful signal for chatbot operators.
+In [Moffatt v. Air Canada*, 2024 BCCRT 149](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), decided on 14 February 2024, the tribunal found **negligent misrepresentation**. It held that Air Canada owed a duty of care, had not taken reasonable care to ensure the chatbot was accurate, and could not treat the chatbot as a separate legal entity responsible for its own actions: the chatbot was part of the airline’s website. It also rejected the idea that a customer should cross-check the chatbot against another page. Damages were C$650.88, the difference between the fare paid and the bereavement fare, plus interest and fees. The [American Bar Association](https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/) and Canadian law firms have treated the reasoning as a useful signal for chatbot operators.
 
-I want to be precise about its weight. This is a small-claims tribunal decision, so it is persuasive rather than binding, and commentators have noted that the tribunal said little about why the airline’s conduct was negligent because Air Canada offered it almost no information about how the chatbot worked. The money was trivial. The principle is not: a company that puts an AI system in front of customers should expect to answer for what it says, and linking to the real policy does not cure a wrong summary. Practically, that means constraining a customer-facing model to verified sources, logging what it says, and designing a path to a human with authority to correct it.
+I want to be precise about its weight. This is a small-claims tribunal decision, so it is persuasive rather than binding, and commentators have noted that the tribunal said little about why the airline’s conduct was negligent because Air Canada offered it almost no information about how the chatbot worked. The money was trivial. The principle is not:** a company that puts an AI system in front of customers should expect to answer for what it says**, and linking to the real policy does not cure a wrong summary. Practically, that means constraining a customer-facing model to verified sources, logging what it says, and designing a path to a human with authority to correct it.
 
 ## Case Study 4: Rite Aid’s Biometric Ban (2024)
 
 *
 
-Between 2012 and 2020, Rite Aid used facial recognition in hundreds of stores to flag people it suspected of shoplifting. In December 2023 the [Federal Trade Commission announced](https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without) a federal court complaint and a [proposed stipulated order](https://www.ftc.gov/system/files/ftc_gov/pdf/2023190_riteaid_stipulated_order_filed.pdf) alleging that the system generated thousands of false matches and that Rite Aid had not taken reasonable steps to prevent harm. The FTC said the company did not test or inquire about accuracy before deployment, did not prevent low-quality images from being used, did not adequately train staff who acted on match alerts, and did not track false positives afterwards. It also alleged the harm fell disproportionately on people of colour and women. Rite Aid, which was in Chapter 11 bankruptcy at the time, said it disagreed with the allegations and described the programme as a pilot in a limited number of stores.
+Between 2012 and 2020, Rite Aid used facial recognition in hundreds of stores to flag people it suspected of shoplifting. In December 2023 the [Federal Trade Commission announced](https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without) a federal court complaint and a [proposed stipulated order](https://www.ftc.gov/system/files/ftc_gov/pdf/2023190_riteaid_stipulated_order_filed.pdf) alleging that the system generated thousands of false matches and that Rite Aid had **not taken reasonable steps to prevent harm**. The FTC said the company did not test or inquire about accuracy before deployment, did not prevent low-quality images from being used, did not adequately train staff who acted on match alerts, and did not track false positives afterwards. It also alleged the **harm fell disproportionately on people of colour and women**. Rite Aid, which was in Chapter 11 bankruptcy at the time, said it disagreed with the allegations and described the programme as a pilot in a limited number of stores.
 
 The remedy is what made the case notable. Rite Aid was barred from using facial recognition for surveillance for five years and ordered to delete the images it had collected and any algorithms developed from them. Lawyers at [Mintz](https://www.mintz.com/insights-center/viewpoints/54731/2024-01-23-algorithmic-disgorgement-increasingly-important-part) describe it as the FTC’s first use of its Section 5 unfairness authority against an allegedly discriminatory use of AI. It was not the first use of model deletion, though. The FTC began using what is called algorithmic disgorgement with Cambridge Analytica in 2019 and applied it again in Everalbum, WW International and Kurbo, and Edmodo. I corrected this point because my earlier version said Rite Aid introduced the remedy, and it did not.
 
-Two further corrections. First, an FTC order binds the company that signs it. It is not common law and it does not create precedent in the way a court judgment does, although it signals what the agency considers unreasonable. Second, the EU treatment of this kind of system is more nuanced than “banned”. The AI Act prohibits certain real-time remote biometric identification in publicly accessible spaces for law enforcement, with exceptions, while remote biometric identification more generally is a high-risk use, and biometric data also engages GDPR Article 9. A private retailer in the EU would be looking at high-risk obligations and data protection law rather than an outright Article 5 ban.
+Two further corrections. First, an FTC order binds the company that signs it. It is not common law and it does not create precedent in the way a court judgment does, although it signals what the agency considers unreasonable. Second, the EU treatment of this kind of system is more nuanced than “banned”. The AI Act prohibits certain real-time remote biometric identification in publicly accessible spaces for law enforcement, with exceptions, while remote biometric identification more generally is a high-risk use, and biometric data also engages **GDPR Article 9**. A private retailer in the EU would be looking at high-risk obligations and data protection law rather than an outright Article 5 ban.
 
 ## Case Study 5: The Hong Kong Deepfake CFO (2024)
 
-In January 2024, a finance employee in the Hong Kong office of the engineering firm Arup received what looked like a message from the company’s UK chief financial officer asking for a confidential transaction. He suspected phishing. He then joined a video call in which the CFO and other colleagues appeared and spoke, and every participant other than him was a deepfake. His doubts were put aside, and he made 15 transfers totalling HK$200 million, about US$25.6 million. Arup notified Hong Kong police that month and confirmed the incident in [May 2024](https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk), saying its financial stability and operations were unaffected and that no internal systems were compromised.
+In January 2024, a finance employee in the Hong Kong office of the engineering firm Arup received what looked like a message from the company’s UK chief financial officer asking for a confidential transaction. He suspected phishing. He then joined a video call in which the CFO and other colleagues appeared and spoke, and every participant other than him was a deepfake. His doubts were put aside, and he made **15 transfers totalling HK$200 million, about US$25.6 million**. Arup notified Hong Kong police that month and confirmed the incident in [May 2024](https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk), saying its financial stability and operations were unaffected and that no internal systems were compromised.
 
 An earlier version of this article said the employee requested the video call as a precaution. The public reporting does not support that. What it does support is a more uncomfortable point: the video call was the thing that overcame a correct suspicion. Seeing and hearing familiar colleagues is no longer evidence of identity, and any control that relies on it is broken.
 
@@ -242,6 +242,65 @@ For those interested in exploring similar themes, consider:
 - [7 Essential Books on AI](https://aviperera.com/7-essential-books-on-ai-governance-every-leader-should-read/) – by the pioneers at the forefront of AI
 
 - [Ethical Implications of AI in Warfare and Defence](https://aviperera.com/the-ethical-implications-of-ai-in-warfare-and-defence-a-comprehensive-perspective/) – very interesting read
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "AI Ethics Case Studies: Lessons Learned from Real-World Failures",
+      "datePublished": "2024-10-30",
+      "dateModified": "2026-10-26",
+      "author": {
+        "@type": "Person",
+        "name": "Avi Perera",
+        "url": "https://aviperera.com/my-story/",
+        "sameAs": [
+          "https://orcid.org/0009-0005-1903-6868",
+          "https://www.linkedin.com/in/avi-perera"
+        ]
+      },
+      "publisher": { "@type": "Person", "name": "Avi Perera" },
+      "mainEntityOfPage": "https://aviperera.com/ai-ethics-case-studies-lessons-learned-from-real-world-failures/",
+      "about": ["AI ethics", "AI governance", "EU AI Act", "Product liability", "Algorithmic bias"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are companies legally liable for what their AI chatbots say?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In some circumstances, yes. In Moffatt v. Air Canada (2024 BCCRT 149), a British Columbia tribunal held the airline liable for negligent misrepresentation by its chatbot and rejected the argument that the bot was a separate entity. It is a small-claims decision, so persuasive rather than binding." }
+        },
+        {
+          "@type": "Question",
+          "name": "When do the EU AI Act's high-risk rules apply?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Following the AI Omnibus (Regulation (EU) 2026/1744), stand-alone high-risk systems under Annex III apply from 2 December 2027, and high-risk AI embedded in regulated products from 2 August 2028. Prohibited practices have applied since February 2025." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is algorithmic disgorgement?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A remedy requiring a company to delete not only improperly obtained data but also the models or algorithms built from it. The US FTC first used it against Cambridge Analytica in 2019 and again in the Everalbum, WW International and Kurbo, Edmodo and Rite Aid matters." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Council of Europe AI Convention in force?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not as of October 2026. It needs five ratifications, including three from Council of Europe member states, and a three-month waiting period. The European Union ratified it in May 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a video call still be trusted to verify someone's identity?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. In the 2024 Arup case, a finance employee was persuaded by a deepfaked video call to transfer about US$25.6 million. Organisations should verify high-value requests through an independent channel and require a second approver." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the EU Product Liability Directive already in effect?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not yet for practical purposes. Directive (EU) 2024/2853 must be transposed by 9 December 2026 and applies to products placed on the market after that date. It treats software, including AI systems, as a product subject to strict liability." }
+        }
+      ]
+    }
+  ]
+}
 
 ---
 
