@@ -6,6 +6,7 @@
 
 | Date | Research Dossier / Publication | Canonical Link |
 | :--- | :--- | :--- |
+| `2026-10-28` | [OpenAI’s Agent Hacked Australia’s Medicare Portal: What the 84-Day Timeline Reveals](openai-agent-australia-medicare-hack.md) | [Original Article ↗](https://aviperera.com/openai-agent-australia-medicare-hack/) |
 | `2026-10-27` | [Unitree H1 and H2](unitree-h1-h2.md) | [Original Article ↗](https://aviperera.com/unitree-h1-h2/) |
 | `2026-10-26` | [Has Trump Become a Dictator? What the Evidence Shows, and What It Means for the World](is-trump-a-dictator-evidence-law-international-order.md) | [Original Article ↗](https://aviperera.com/is-trump-a-dictator-evidence-law-international-order/) |
 | `2026-10-23` | [PHP2Shell: How an AI-Assisted Discovery Pulled Governments Offline, and What It Means for Law and Global Security](php2shell-ai-discovered-php-vulnerability.md) | [Original Article ↗](https://aviperera.com/php2shell-ai-discovered-php-vulnerability/) |
@@ -105,4 +106,3 @@
 | `2024-10-20` | [Best AI Regulatory Compliance Tools for Businesses (2026)](best-ai-regulatory-compliance-tools-for-businesses-2024.md) | [Original Article ↗](https://aviperera.com/best-ai-regulatory-compliance-tools-for-businesses-2024/) |
 | `2024-10-19` | [The Perfection Trap (Thomas Curran) – Book Summary, Notes & Highlights](the-perfection-trap-thomas-curran-book-summary-notes-highlights.md) | [Original Article ↗](https://aviperera.com/the-perfection-trap-thomas-curran-book-summary-notes-highlights/) |
 | `2024-10-18` | [Superintelligence (Nick Bostrom) – Book Summary, Notes & Highlights](superintelligence-nick-bostrom-book-summary-notes-highlights.md) | [Original Article ↗](https://aviperera.com/superintelligence-nick-bostrom-book-summary-notes-highlights/) |
-| `2024-10-17` | [Finite and Infinite Games: A Multidisciplinary Analysis](finite-and-infinite-games-a-multidisciplinary-analysis.md) | [Original Article ↗](https://aviperera.com/finite-and-infinite-games-a-multidisciplinary-analysis/) |
